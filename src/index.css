@@ -1,0 +1,91 @@
+body {
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-container {
+  background: rgb(107, 215, 250);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+/* Card hover animation */
+.movie-card {
+  border-radius: 18px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: linear-gradient(135deg, #dceb50, #ed998c);
+}
+
+.movie-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading animation */
+.movie-heading {
+  animation: slideDown 0.6s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in utility */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.fade-in.delay-1 { animation-delay: 0.2s; }
+.fade-in.delay-2 { animation-delay: 0.4s; }
+.fade-in.delay-3 { animation-delay: 0.6s; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Movie title */
+.movie-title {
+  color: #b31717;
+  transition: color 0.3s ease;
+}
+
+.movie-title:hover {
+  color: #0d6efd;
+}
+
+/* Detail card */
+.movie-detail-card {
+  border-radius: 22px;
+  background: linear-gradient(135deg, #ffffff, #eef1f4);
+}
+
+/* Stars */
+.star-rating {
+  margin-top: 6px;
+}
+
+.star {
+  color: #e4e5e9;
+  margin: 0 2px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.star.active {
+  color: #f2f51c;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
